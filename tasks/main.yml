@@ -54,8 +54,9 @@
     mode: 0755
     state: directory
   with_items:
-  - /var/log/vault
-  - /var/lib/vault
+    - /etc/vault.d/plugins
+    - /var/log/vault
+    - /var/lib/vault
   tags: ['vault']
 
 - name: "Configure vault"
