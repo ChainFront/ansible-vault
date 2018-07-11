@@ -28,7 +28,7 @@
     group: root
     mode: 0644
   register: vault_download
-  when: vault_installed_version|failed or vault_installed_version.stdout != vault_version
+  when: vault_installed_version is failed or vault_installed_version.stdout != vault_version
   tags: ['vault']
 
 - name: "Make sure that unzip is installed"
@@ -42,7 +42,7 @@
     owner: root
     group: root
     mode: 0755
-  when: vault_installed_version|failed or vault_installed_version.stdout != vault_version
+  when: vault_installed_version is failed or vault_installed_version.stdout != vault_version
   notify: Restart vault
   tags: ['vault']
 
