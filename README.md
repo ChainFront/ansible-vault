@@ -10,6 +10,6 @@ To test, use the Vagrantfile in the tests folder.
 cd tests
 vagrant up --provision
 vagrant ssh
-export VAULT_ADDR=http://127.0.0.1:8200
+export VAULT_ADDR=http://192.168.50.4:8200
 vault status
 ```

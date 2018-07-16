@@ -3,9 +3,10 @@ storage "file" {
 }
 
 listener "tcp" {
+    address = "192.168.50.4:8200"
 	tls_disable = 1
 }
 
 ui = "true"
-api_addr = "http://127.0.0.1:8200"
+api_addr = "http://192.168.50.4:8200"
 plugin_directory = "/etc/vault.d/plugins"
